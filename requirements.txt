@@ -1,0 +1,6 @@
+playwright
+pytest
+pytest-xdist
+allure-pytest
+pyyaml
+python-dotenv

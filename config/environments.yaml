@@ -1,0 +1,15 @@
+dev:
+  base_url: "https://demowebshop.tricentis.com/"
+
+qa:
+  base_url: "https://qa.orangehrm.com"
+
+staging:
+  base_url: "https://staging.orangehrm.com"
+  username: "Admin"
+  password: "admin123"
+
+prod:
+  base_url: "https://orangehrm.com"
+  username: "prod_user"
+  password: "prod_password"
