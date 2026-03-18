@@ -1,4 +1,4 @@
-from playwright_python_framework_for_DemoWebShop_old_version.utils.logger import get_logger
+from utils.logger import get_logger
 
 class BasePage:
 

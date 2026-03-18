@@ -1,7 +1,7 @@
 import allure
 
-from playwright_python_framework_for_DemoWebShop_old_version.pages.Product_search_page import SearchPage
-from playwright_python_framework_for_DemoWebShop_old_version.pages.Add_to_cart_page import ProductPage
+from pages.Product_search_page import SearchPage
+from pages.Add_to_cart_page import ProductPage
 
 
 @allure.feature("Shopping Cart")

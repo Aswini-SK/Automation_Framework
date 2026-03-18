@@ -1,6 +1,6 @@
 import allure
 
-from playwright_python_framework_for_DemoWebShop_old_version.pages.Verify_order_page import OrderPage
+from pages.Verify_order_page import OrderPage
 
 
 @allure.feature("Order")

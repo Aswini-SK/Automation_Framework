@@ -1,5 +1,5 @@
-from playwright_python_framework_for_DemoWebShop_old_version.pages.base_page import BasePage
-from playwright_python_framework_for_DemoWebShop_old_version.locators.Product_search_locators import SearchLocators
+from pages.base_page import BasePage
+from locators.Product_search_locators import SearchLocators
 
 
 class SearchPage(BasePage):

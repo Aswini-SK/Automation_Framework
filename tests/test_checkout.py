@@ -1,6 +1,6 @@
 import allure
-from playwright_python_framework_for_DemoWebShop_old_version.pages.Checkout_page import CheckoutPage
-from playwright_python_framework_for_DemoWebShop_old_version.pages.Apply_cupon_page import CartPage
+from pages.Checkout_page import CheckoutPage
+from pages.Apply_cupon_page import CartPage
 from playwright_python_framework_for_DemoWebShop.pages.login_page import LoginPage
 
 

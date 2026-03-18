@@ -1,7 +1,7 @@
 import allure
 import json
 from faker import Faker
-from playwright_python_framework_for_DemoWebShop_old_version.pages.Registration_Page import RegistrationPage
+from pages.Registration_Page import RegistrationPage
 
 fake = Faker()
 
