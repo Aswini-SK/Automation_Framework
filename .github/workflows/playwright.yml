@@ -23,27 +23,28 @@ jobs:
     # ✅ YOUR STEP ADDED HERE
     - name: Set Environment Variables
       run: |
-        echo "ENV=QA" >> $GITHUB_ENV
+        echo "ENV=dev" >> $GITHUB_ENV
 
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        playwright install --with-deps
-
-    - name: Run Tests (Parallel Execution)
+        pip install pytest playwright pytest-xdist allure-pytest
+        python -m playwright install --with-deps
+    - name: Run Tests
       run: |
-        pytest -n auto --alluredir=allure-results
+        pytest -n auto --alluredir=reports/allure
 
     - name: Upload Allure Results
-      uses: actions/upload-artifact@v3
+      if: always()
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
-        path: allure-results
+        path: reports/allure
 
-    - name: Upload Logs (Optional)
+    - name: Upload Logs
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: logs
         path: logs
