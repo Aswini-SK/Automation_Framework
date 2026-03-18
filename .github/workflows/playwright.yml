@@ -1,0 +1,49 @@
+name: Playwright Framework CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  schedule:
+    - cron: '0 6 * * *'   # daily at 6 AM
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    # ✅ YOUR STEP ADDED HERE
+    - name: Set Environment Variables
+      run: |
+        echo "ENV=QA" >> $GITHUB_ENV
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        playwright install --with-deps
+
+    - name: Run Tests (Parallel Execution)
+      run: |
+        pytest -n auto --alluredir=allure-results
+
+    - name: Upload Allure Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-results
+        path: allure-results
+
+    - name: Upload Logs (Optional)
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: logs
+        path: logs
