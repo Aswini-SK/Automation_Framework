@@ -31,6 +31,11 @@ jobs:
         pip install -r requirements.txt
         pip install pytest playwright pytest-xdist allure-pytest
         python -m playwright install --with-deps
+      # ✅ ADD HERE 👇
+    - name: Debug Structure
+      run: |
+        pwd
+        ls -R
     - name: Run Tests
       run: |
         pytest -n auto --alluredir=reports/allure
