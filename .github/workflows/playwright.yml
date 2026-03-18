@@ -26,22 +26,25 @@ jobs:
         echo "ENV=dev" >> $GITHUB_ENV
 
     - name: Install Dependencies
+      working-directory: playwright_python_framework_for_DemoWebShop_old_version
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest playwright pytest-xdist allure-pytest
         python -m playwright install --with-deps
-      # ✅ ADD HERE 👇
+
     - name: Debug Structure
+      working-directory: playwright_python_framework_for_DemoWebShop_old_version
       run: |
         pwd
         ls -R
+
     - name: Run Tests
+      working-directory: playwright_python_framework_for_DemoWebShop_old_version
       run: |
         pytest -n auto --alluredir=reports/allure
       env:
-        PYTHONPATH: ${{ github.workspace }}
-
+        PYTHONPATH: ${{ github.workspace }}/playwright_python_framework_for_DemoWebShop_old_version
     - name: Upload Allure Results
       if: always()
       uses: actions/upload-artifact@v4
