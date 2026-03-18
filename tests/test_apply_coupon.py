@@ -1,6 +1,6 @@
 import allure
 
-from playwright_python_framework_for_DemoWebShop.pages.Apply_cupon_page import CartPage
+from playwright_python_framework_for_DemoWebShop_old_version.pages.Apply_cupon_page import CartPage
 
 
 @allure.feature("Coupon")

@@ -1,7 +1,7 @@
 import allure
 
-from playwright_python_framework_for_DemoWebShop.pages.Product_search_page import SearchPage
-from playwright_python_framework_for_DemoWebShop.utils.data_reader import read_json
+from playwright_python_framework_for_DemoWebShop_old_version.pages.Product_search_page import SearchPage
+from playwright_python_framework_for_DemoWebShop_old_version.utils.data_reader import read_json
 
 data = read_json("test_data/products.json")
 

@@ -1,5 +1,5 @@
-from playwright_python_framework_for_DemoWebShop.locators.Add_to_cart_locators import ProductLocators
-from playwright_python_framework_for_DemoWebShop.pages.base_page import BasePage
+from playwright_python_framework_for_DemoWebShop_old_version.locators.Add_to_cart_locators import ProductLocators
+from playwright_python_framework_for_DemoWebShop_old_version.pages.base_page import BasePage
 
 class ProductPage(BasePage):
 

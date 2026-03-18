@@ -3,7 +3,7 @@ import json
 import allure
 import pytest
 
-from playwright_python_framework_for_DemoWebShop.pages.login_page import LoginPage
+from playwright_python_framework_for_DemoWebShop_old_version.pages.login_page import LoginPage
 
 
 @allure.feature("Login")

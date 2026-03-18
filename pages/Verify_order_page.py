@@ -1,5 +1,5 @@
-from playwright_python_framework_for_DemoWebShop.locators.Verify_order_locators import OrderLocators
-from playwright_python_framework_for_DemoWebShop.pages.base_page import BasePage
+from playwright_python_framework_for_DemoWebShop_old_version.locators.Verify_order_locators import OrderLocators
+from playwright_python_framework_for_DemoWebShop_old_version.pages.base_page import BasePage
 
 class OrderPage(BasePage):
 

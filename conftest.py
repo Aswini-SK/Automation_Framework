@@ -2,17 +2,16 @@ import allure
 import pytest
 import json
 import pytest
-from playwright_python_framework_for_DemoWebShop.pages.login_page import LoginPage
-# from playwright_python_framework.fixtures.browser_fixture import page
-from playwright_python_framework_for_DemoWebShop.pages.Product_search_page import SearchPage
-from playwright_python_framework_for_DemoWebShop.pages.Add_to_cart_page import ProductPage
+from playwright_python_framework_for_DemoWebShop_old_version.pages.login_page import LoginPage
+from playwright_python_framework_for_DemoWebShop_old_version.pages.Product_search_page import SearchPage
+from playwright_python_framework_for_DemoWebShop_old_version.pages.Add_to_cart_page import ProductPage
 import pytest
-from playwright_python_framework_for_DemoWebShop.Browser_manager import BrowserManager
+from playwright_python_framework_for_DemoWebShop_old_version.Browser_manager import BrowserManager
 
 import pytest
 from playwright.sync_api import sync_playwright
 
-from playwright_python_framework_for_DemoWebShop.config.config_reader import ConfigReader
+from playwright_python_framework_for_DemoWebShop_old_version.config.config_reader import ConfigReader
 
 
 @pytest.fixture(scope="session")
